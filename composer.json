@@ -1,7 +1,7 @@
 {
     "name": "alg/ForumSponsor",
     "type": "phpbb-extension",
-    "description": "bla-bla",
+    "description": "Add sponsor logo and link for some forums on  Board Index ",
     "homepage": "http://www.phpbbguru.net",
     "version": "1.0.0",
     "time": "2014-07-10",

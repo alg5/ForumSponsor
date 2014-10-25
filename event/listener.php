@@ -12,10 +12,6 @@ namespace alg\ForumSponsor\event;
 /**
 * @ignore
 */
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
 
 /**
 * Event listener
@@ -25,7 +21,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 class listener implements EventSubscriberInterface
 {
 
-	public function __construct(  \phpbb\template\template $template, \phpbb\user $user)
+	public function __construct(\phpbb\template\template $template, \phpbb\user $user)
 	{
 		$this->template = $template;
 		$this->user = $user;
@@ -41,11 +37,11 @@ class listener implements EventSubscriberInterface
 	}
 	public function display_forums_modify_template_vars($event)
 	{
-		$this->user->add_lang_ext('alg/ForumSponsor', 'info_acp_ForumSponsor');
+		$this->user->add_lang_ext('alg/ForumSponsor', 'info_acp_forumsponsor');
 		$forum_row = $event['forum_row'];
 		$row = $event['row'];
 		$forum_row = array_merge($forum_row, array(
-				'FORUM_SPONSOR'			=> ($row['forum_sponsor']) ? $row['forum_sponsor'] : '',				
+				'FORUM_SPONSOR'			=> ($row['forum_sponsor']) ? $row['forum_sponsor'] : '',
 				));
 		$event['forum_row'] = $forum_row;
 	}

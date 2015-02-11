@@ -4,5 +4,6 @@ services:
         arguments:
             - @template
             - @user
+            - @request
         tags:
             - { name: event.listener }

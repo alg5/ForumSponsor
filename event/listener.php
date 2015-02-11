@@ -60,7 +60,6 @@ class listener implements EventSubscriberInterface
 	#region ACP functions
 	public function acp_manage_forums_request_data($event)
 	{
-        
 		$forum_data = $event['forum_data'];
 		$fs = $forum_data['forum_type'] == FORUM_CAT ? $this->request->variable('cat_sponsor', '', true) : $this->request->variable('forum_sponsor', '', true);
 		$forum_data += array(

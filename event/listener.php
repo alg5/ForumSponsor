@@ -74,6 +74,7 @@ class listener implements EventSubscriberInterface
 			 $this->template->assign_vars(array(
 				 'FORUM_SPONSOR_ABOVE'		=> $fs_above,
 			));
+        }
 			
 	}
 	public function viewforum_get_topic_data($event)

@@ -36,6 +36,9 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'FORUM_SPONSOR'			=> 'При поддержке',
-	'FORUM_SPONSOR_ADM'		=> 'Данные спонсора форума',
-	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML код баннера спонсора форума',
+	'FORUM_SPONSOR_ADM'		=> 'Данные спонсора форума на главной странице',
+	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML-код баннера от спонсора на главной странице',
+	'FORUM_SPONSOR_ABOVE_ADM'		=> 'Баннер и данные спонсора форума сверху форума',
+	'FORUM_SPONSOR_ABOVE_EXPLAIN'	=> 'HTML-код баннера от спонсора  сверху форума',
+	'PARSE_HTML'						=> 'Разрешить  HTML',
 ));

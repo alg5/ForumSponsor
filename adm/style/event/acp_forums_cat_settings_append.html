@@ -1,4 +1,10 @@
-		<dl>
+	<!--<dl>
 		<dt><label for="forum_sponsor">{L_FORUM_SPONSOR_ADM}:</label><br /><span>{L_FORUM_SPONSOR_EXPLAIN}</span></dt>
 		<dd><textarea id="cat_sponsor" name="cat_sponsor" rows="15" cols="45">{FORUM_SPONSOR}</textarea></dd>
-	</dl>
+	</dl>-->
+    <!-- IF S_FORUM_CAT -->
+        <!-- INCLUDE acp_forumsponsor.html -->
+    <!-- ENDIF -->
+   cat: S_FORUM_CAT = {S_FORUM_CAT}
+       <br />
+    cat:S_FORUM_POST = {S_FORUM_POST}

@@ -38,4 +38,5 @@ $lang = array_merge($lang, array(
 	'FORUM_SPONSOR'			=> 'With the support of',
 	'FORUM_SPONSOR_ADM'		=> 'Data Sponsor Forum',
 	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML code for sponsor forum banner ',
+	'PARSE_HTML'						=> 'Parse HTML',
 ));

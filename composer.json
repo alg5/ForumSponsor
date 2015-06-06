@@ -27,12 +27,12 @@
     "require": {
         "php": ">=5.3.3"
     },
-	"require-dev": {
+    "require-dev": {
       "phpbb/epv": "dev-master"
    },
     "extra": {
         "display-name": "Forum Sponsor",
-		"soft-require": {
+        "soft-require": {
            "phpbb/phpbb": "3.1.*@dev"
         },
         "version-check": {

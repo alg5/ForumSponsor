@@ -42,8 +42,8 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 	{
 		return array(
 			'drop_columns'	=> array(
-//					 $this->table_prefix . 'forums' => array('forum_sponsor'),
-					 $this->table_prefix . 'forums' => array(
+//					$this->table_prefix . 'forums' => array('forum_sponsor'),
+					$this->table_prefix . 'forums' => array(
 							'forum_sponsor_above',
 							'forum_sponsor_allow_html',
 							'forum_sponsor_above_uid',
@@ -53,7 +53,7 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 			),
 		);
 
-	 }
+	}
 
 	public function update_data()
 	{

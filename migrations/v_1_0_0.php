@@ -25,51 +25,35 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 	public function update_schema()
 	{
 		return  array(
-				 'add_columns' => array (
-					 $this->table_prefix . 'forums' => array  (
-						 'forum_sponsor' => array('VCHAR:500', ''),
+				'add_columns' => array (
+					$this->table_prefix . 'forums' => array  (
+						'forum_sponsor' => array('VCHAR:500', ''),
 								'forum_sponsor_above' => array('VCHAR_UNI:500', ''),
 								'forum_sponsor_allow_html' => array('BOOL', 0),
 								'forum_sponsor_above_uid' => array('VCHAR:8', ''),
 								'forum_sponsor_above_bitfield' => array('VCHAR:255', ''),
-						        'forum_sponsor_above_options' => array('UINT:11', 7),
-					 ) 
-			 )
+								'forum_sponsor_above_options' => array('UINT:11', 7),
+					)
+			)
 		);
 	}
 
 	public function revert_schema()
 	{
-/*		  return 	array(	
-				'drop_columns' => array(
-//					 $this->table_prefix . 'forums' => array('forum_sponsor'),
-					 $this->table_prefix . 'forums' => array(
-                     'forum_sponsor_above',
-                     'forum_sponsor_above_uid',
-                     'forum_sponsor_above_bitfield',
-                     'forum_sponsor_above_options',
-                     
-                     ),
-                )
-*/
 		return array(
 			'drop_columns'	=> array(
 //					 $this->table_prefix . 'forums' => array('forum_sponsor'),
 					 $this->table_prefix . 'forums' => array(
-                     'forum_sponsor_above',
-                     'forum_sponsor_allow_html',
-                     'forum_sponsor_above_uid',
-                     'forum_sponsor_above_bitfield',
-                     'forum_sponsor_above_options',
+							'forum_sponsor_above',
+							'forum_sponsor_allow_html',
+							'forum_sponsor_above_uid',
+							'forum_sponsor_above_bitfield',
+							'forum_sponsor_above_options',
 				),
 			),
 		);
-                
-                
-                
-                
-                
-    }
+
+	 }
 
 	public function update_data()
 	{

@@ -27,7 +27,7 @@ class listener implements EventSubscriberInterface
 		$this->user = $user;
 		$this->request = $request;
 		$this->phpbb_root_path = $phpbb_root_path;
-		  $this->php_ext = $php_ext;
+		$this->php_ext = $php_ext;
 	}
 
 	static public function getSubscribedEvents()
@@ -51,31 +51,30 @@ class listener implements EventSubscriberInterface
 				));
 		$event['forum_row'] = $forum_row;
 	}
-	 
-	 public function viewtopic_assign_template_vars_before($event)
-	 {
+
+	public function viewtopic_assign_template_vars_before($event)
+	{
 		$forum_sponsor_above = $event['topic_data']['forum_sponsor_above'];
 		if($forum_sponsor_above)
 		{
 				$fs_allow_html = $event['topic_data']['forum_sponsor_allow_html'];
 				if ($fs_allow_html)
 				{
-					 $fs_above = $forum_sponsor_above;
+					$fs_above = $forum_sponsor_above;
 				}
 				else
 				{
-				 $fs_above = generate_text_for_display(
-												$forum_sponsor_above, 
-												$event['topic_data']['forum_sponsor_above_uid'], 
-												$event['topic_data']['forum_sponsor_above_bitfield'], 
+					$fs_above = generate_text_for_display(
+												$forum_sponsor_above,
+												$event['topic_data']['forum_sponsor_above_uid'],
+												$event['topic_data']['forum_sponsor_above_bitfield'],
 												$event['topic_data']['forum_sponsor_above_options']
 										);
 				}
-			 $this->template->assign_vars(array(
-				 'FORUM_SPONSOR_ABOVE'		=> $fs_above,
+			$this->template->assign_vars(array(
+				'FORUM_SPONSOR_ABOVE'		=> $fs_above,
 			));
-        }
-			
+		}
 	}
 	public function viewforum_get_topic_data($event)
 	{
@@ -83,7 +82,7 @@ class listener implements EventSubscriberInterface
 	$forum_sponsor_above = $event['forum_data']['forum_sponsor_above'];
 	if($forum_sponsor_above)
 	{
-	 $fs_allow_html = $event['forum_data']['forum_sponsor_allow_html'];
+	$fs_allow_html = $event['forum_data']['forum_sponsor_allow_html'];
 		if ($fs_allow_html)
 		{
 			$fs_above = $forum_sponsor_above;
@@ -91,15 +90,15 @@ class listener implements EventSubscriberInterface
 		else
 		{
 			$fs_above = generate_text_for_display(
-										$forum_sponsor_above, 
-										$event['forum_data']['forum_sponsor_above_uid'], 
-										$event['forum_data']['forum_sponsor_above_bitfield'], 
+										$forum_sponsor_above,
+										$event['forum_data']['forum_sponsor_above_uid'],
+										$event['forum_data']['forum_sponsor_above_bitfield'],
 										$event['forum_data']['forum_sponsor_above_options']
 								);
 		}
 		$this->template->assign_vars(array(
 			'FORUM_SPONSOR_ABOVE'		=> $fs_above,
-	 ));
+		));
 	}
 	}
 
@@ -119,7 +118,7 @@ class listener implements EventSubscriberInterface
 			$allow_bbcode = $allow_smilies = $allow_urls = false;
 		}
 		else
-		  {
+		{
 				//include_once($this->phpbb_root_path . 'includes/functions_content.' . $this->php_ext);
 				$allow_bbcode = $allow_smilies = $allow_urls = true;
 				generate_text_for_storage(
@@ -133,8 +132,7 @@ class listener implements EventSubscriberInterface
 			);
 
 				$forum_sponsor_above = $fs_above;
-				
-		  }
+		}
 		$forum_data += array(
 			'forum_sponsor'									=>  htmlspecialchars_decode(utf8_normalize_nfc($fs)),
 			'forum_sponsor_above'					=>  $forum_sponsor_above,

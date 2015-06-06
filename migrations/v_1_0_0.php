@@ -28,7 +28,7 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 				 'add_columns' => array (
 					 $this->table_prefix . 'forums' => array  (
 						 'forum_sponsor' => array('VCHAR:500', ''),
-								'forum_sponsor_above' => array('VCHAR_UNI:255', ''),
+								'forum_sponsor_above' => array('VCHAR_UNI:500', ''),
 								'forum_sponsor_allow_html' => array('BOOL', 0),
 								'forum_sponsor_above_uid' => array('VCHAR:8', ''),
 								'forum_sponsor_above_bitfield' => array('VCHAR:255', ''),
@@ -40,17 +40,36 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 
 	public function revert_schema()
 	{
-		  return 	array(	
+/*		  return 	array(	
 				'drop_columns' => array(
-					 $this->table_prefix . 'forums' => array('forum_sponsor'),
-					 $this->table_prefix . 'forums' => array('forum_sponsor_above'),
-					 $this->table_prefix . 'forums' => array('forum_sponsor_allow_html'),
-					 $this->table_prefix . 'forums' => array('forum_sponsor_above_uid'),
-					 $this->table_prefix . 'forums' => array('forum_sponsor_above_bitfield'),
-					 $this->table_prefix . 'forums' => array('forum_sponsor_above_options'),
+//					 $this->table_prefix . 'forums' => array('forum_sponsor'),
+					 $this->table_prefix . 'forums' => array(
+                     'forum_sponsor_above',
+                     'forum_sponsor_above_uid',
+                     'forum_sponsor_above_bitfield',
+                     'forum_sponsor_above_options',
+                     
+                     ),
+                )
+*/
+		return array(
+			'drop_columns'	=> array(
+//					 $this->table_prefix . 'forums' => array('forum_sponsor'),
+					 $this->table_prefix . 'forums' => array(
+                     'forum_sponsor_above',
+                     'forum_sponsor_allow_html',
+                     'forum_sponsor_above_uid',
+                     'forum_sponsor_above_bitfield',
+                     'forum_sponsor_above_options',
 				),
-		  );
-	}
+			),
+		);
+                
+                
+                
+                
+                
+    }
 
 	public function update_data()
 	{

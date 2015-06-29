@@ -54,7 +54,7 @@ class listener implements EventSubscriberInterface
 		$this->user->add_lang_ext('alg/ForumSponsor', 'info_acp_forumsponsor');
 		$forum_row = $event['forum_row'];
 		$row = $event['row'];
- 		$forum_sponsor = $row['forum_sponsor'];
+		$forum_sponsor = $row['forum_sponsor'];
 		$fs = $forum_sponsor;
 		if($fs)
 		{
@@ -114,8 +114,8 @@ class listener implements EventSubscriberInterface
 					$event['forum_data']['forum_sponsor_above_uid'],
 					$event['forum_data']['forum_sponsor_above_bitfield'],
 					$event['forum_data']['forum_sponsor_above_options']
-				 );
-			 }
+				);
+			}
 		$this->template->assign_vars(array(
 			'FORUM_SPONSOR_ABOVE'		=> $fs_above,
 		));

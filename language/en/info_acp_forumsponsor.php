@@ -36,7 +36,10 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'FORUM_SPONSOR'			=> 'With the support of',
-	'FORUM_SPONSOR_ADM'		=> 'Data Sponsor Forum',
+	'FORUM_SPONSOR_ADM'		=> 'Data sponsor forum on index',
 	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML code for sponsor forum banner ',
-	'PARSE_HTML'						=> 'Parse HTML',
+	'FORUM_SPONSOR_ABOVE_ADM'		=> 'Data sponsor above the  forum ',
+	'FORUM_SPONSOR_ABOVE_EXPLAIN'	=> 'HTML/BBCODE banner(data) from sponsor above the forum',
+	'USE_HTML'						=> 'Parse  HTML',
+	'USE_BBCODE'						=> 'Parse  BBCode',
 ));

@@ -20,7 +20,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	 
 	public function __construct(\phpbb\template\template $template, \phpbb\user $user, \phpbb\request\request_interface $request, $phpbb_root_path, $php_ext)
 	{
 		$this->template = $template;
@@ -33,7 +32,7 @@ class listener implements EventSubscriberInterface
 		{
 			define('PARSE_AS_HTML', 0);
 		}
-		  if (!defined('PARSE_AS_BBCODE'))
+		if (!defined('PARSE_AS_BBCODE'))
 		{
 			define('PARSE_AS_BBCODE', 1);
 		}
@@ -64,10 +63,10 @@ class listener implements EventSubscriberInterface
 			{
 				//parse BBCode
 				$fs = generate_text_for_display(
-					 $forum_sponsor,
-					 $row['forum_sponsor_uid'],
-					 $row['forum_sponsor_bitfield'],
-					 $row['forum_sponsor_options']
+					$forum_sponsor,
+					$row['forum_sponsor_uid'],
+					$row['forum_sponsor_bitfield'],
+					$row['forum_sponsor_options']
 				);
 			}
 		}
@@ -108,18 +107,18 @@ class listener implements EventSubscriberInterface
 		if($fs_above)
 		{
 			$fs_above_parse_type = $event['forum_data']['forum_sponsor_above_parse_type'];
-			 if ($fs_above_parse_type == PARSE_AS_BBCODE)
-			 {
-				 $fs_above = generate_text_for_display(
+			if ($fs_above_parse_type == PARSE_AS_BBCODE)
+			{
+				$fs_above = generate_text_for_display(
 					$forum_sponsor_above,
 					$event['forum_data']['forum_sponsor_above_uid'],
 					$event['forum_data']['forum_sponsor_above_bitfield'],
 					$event['forum_data']['forum_sponsor_above_options']
 				 );
 			 }
-		 $this->template->assign_vars(array(
-			 'FORUM_SPONSOR_ABOVE'		=> $fs_above,
-		 ));
+		$this->template->assign_vars(array(
+			'FORUM_SPONSOR_ABOVE'		=> $fs_above,
+		));
 		}
 	}
 
@@ -166,10 +165,10 @@ class listener implements EventSubscriberInterface
 		}
 		$fs_above = isset($forum_data['forum_sponsor_above']) ? $forum_data['forum_sponsor_above'] : '';
 		if($fs_above && $forum_data['forum_sponsor_above_parse_type'] == PARSE_AS_BBCODE)
-		  {
+		{
 				$ret = generate_text_for_edit($fs_above, $forum_data['forum_sponsor_above_uid'], $forum_data['forum_sponsor_above_options']);
 				$fs_above = $ret['text'];
-		  }
+		}
 		$template_data += array(
 			'FORUM_SPONSOR'	=>$fs,
 			'FORUM_SPONSOR_ABOVE'	=> $fs_above,
@@ -180,8 +179,8 @@ class listener implements EventSubscriberInterface
 		$event['template_data'] = $template_data;
 	}
 
-	 private function parse_text_by_parse_type($parse_type, $text_src, &$uid, &$bitfield, $options)
-	 {
+	private function parse_text_by_parse_type($parse_type, $text_src, &$uid, &$bitfield, $options)
+	{
 		$text_dst ='';
 		if ($parse_type == PARSE_AS_HTML)
 		{
@@ -202,6 +201,6 @@ class listener implements EventSubscriberInterface
 			);
 		}
 		return $text_dst;
-	 }
+	}
 	#endregion
 }

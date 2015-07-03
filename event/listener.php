@@ -79,22 +79,19 @@ class listener implements EventSubscriberInterface
 	public function viewtopic_assign_template_vars_before($event)
 	{
 		$forum_sponsor_above = $event['topic_data']['forum_sponsor_above'];
-		if($forum_sponsor_above)
+        $fs_above = $forum_sponsor_above;
+		if($fs_above)
 		{
-				$fs_allow_html = $event['topic_data']['forum_sponsor_allow_html'];
-				if ($fs_allow_html)
-				{
-					$fs_above = $forum_sponsor_above;
-				}
-				else
-				{
-					$fs_above = generate_text_for_display(
-						$forum_sponsor_above,
-						$event['topic_data']['forum_sponsor_above_uid'],
-						$event['topic_data']['forum_sponsor_above_bitfield'],
-						$event['topic_data']['forum_sponsor_above_options']
-					);
-				}
+			$fs_above_parse_type = $event['topic_data']['forum_sponsor_above_parse_type'];
+			if ($fs_above_parse_type == PARSE_AS_BBCODE)
+			{
+				$fs_above = generate_text_for_display(
+					$forum_sponsor_above,
+					$event['topic_data']['forum_sponsor_above_uid'],
+					$event['topic_data']['forum_sponsor_above_bitfield'],
+					$event['topic_data']['forum_sponsor_above_options']
+				);
+			}
 			$this->template->assign_vars(array(
 				'FORUM_SPONSOR_ABOVE'		=> $fs_above,
 			));

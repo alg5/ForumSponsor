@@ -79,7 +79,7 @@ class listener implements EventSubscriberInterface
 	public function viewtopic_assign_template_vars_before($event)
 	{
 		$forum_sponsor_above = $event['topic_data']['forum_sponsor_above'];
-        $fs_above = $forum_sponsor_above;
+		$fs_above = $forum_sponsor_above;
 		if($fs_above)
 		{
 			$fs_above_parse_type = $event['topic_data']['forum_sponsor_above_parse_type'];

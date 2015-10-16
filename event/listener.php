@@ -169,8 +169,8 @@ class listener implements EventSubscriberInterface
 		$template_data += array(
 			'FORUM_SPONSOR'	=>$fs,
 			'FORUM_SPONSOR_ABOVE'	=> $fs_above,
-			'S_FORUM_SPONSOR_HTML_CHECKED'	=>  $forum_data['forum_sponsor_parse_type'] == PARSE_AS_HTML ? true :false,
-			'S_FORUM_SPONSOR_ABOVE_HTML_CHECKED'	=>  $forum_data['forum_sponsor_above_parse_type'] == PARSE_AS_HTML ? true :false,
+			'S_FORUM_SPONSOR_HTML_CHECKED'	=>  isset($forum_data['forum_sponsor_parse_type']) ? $forum_data['forum_sponsor_parse_type'] == PARSE_AS_HTML ? true :false :false,
+			'S_FORUM_SPONSOR_ABOVE_HTML_CHECKED'	=> isset( $forum_data['forum_sponsor_above_parse_type']) ? $forum_data['forum_sponsor_above_parse_type'] == PARSE_AS_HTML ? true :false :false,
 		);
 
 		$event['template_data'] = $template_data;

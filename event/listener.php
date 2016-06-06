@@ -2,7 +2,7 @@
 /**
  *
  * @package ForumSponsor
- * @copyright (c) 2014 alg 
+ * @copyright (c) 2014 alg
  * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
  *
  */
@@ -56,7 +56,7 @@ class listener implements EventSubscriberInterface
 		$row = $event['row'];
 		$forum_sponsor = $row['forum_sponsor'];
 		$fs = $forum_sponsor;
-		if($fs)
+		if ($fs)
 		{
 			$fs_parse_type = $row['forum_sponsor_parse_type'];
 			if ($fs_parse_type == PARSE_AS_BBCODE)
@@ -80,7 +80,7 @@ class listener implements EventSubscriberInterface
 	{
 		$forum_sponsor_above = $event['topic_data']['forum_sponsor_above'];
 		$fs_above = $forum_sponsor_above;
-		if($fs_above)
+		if ($fs_above)
 		{
 			$fs_above_parse_type = $event['topic_data']['forum_sponsor_above_parse_type'];
 			if ($fs_above_parse_type == PARSE_AS_BBCODE)
@@ -101,7 +101,7 @@ class listener implements EventSubscriberInterface
 	{
 		$forum_sponsor_above = $event['forum_data']['forum_sponsor_above'];
 		$fs_above = $forum_sponsor_above;
-		if($fs_above)
+		if ($fs_above)
 		{
 			$fs_above_parse_type = $event['forum_data']['forum_sponsor_above_parse_type'];
 			if ($fs_above_parse_type == PARSE_AS_BBCODE)
@@ -155,13 +155,13 @@ class listener implements EventSubscriberInterface
 		$template_data = $event['template_data'];
 		$forum_data = $event['forum_data'];
 		$fs = isset($forum_data['forum_sponsor']) ? $forum_data['forum_sponsor'] : '';
-		if($fs && $forum_data['forum_sponsor_parse_type'] == PARSE_AS_BBCODE)
+		if 	($fs && $forum_data['forum_sponsor_parse_type'] == PARSE_AS_BBCODE)
 		{
 			$ret = generate_text_for_edit($fs, $forum_data['forum_sponsor_uid'], $forum_data['forum_sponsor_options']);
 			$fs = $ret['text'];
 		}
 		$fs_above = isset($forum_data['forum_sponsor_above']) ? $forum_data['forum_sponsor_above'] : '';
-		if($fs_above && $forum_data['forum_sponsor_above_parse_type'] == PARSE_AS_BBCODE)
+		if ($fs_above && $forum_data['forum_sponsor_above_parse_type'] == PARSE_AS_BBCODE)
 		{
 				$ret = generate_text_for_edit($fs_above, $forum_data['forum_sponsor_above_uid'], $forum_data['forum_sponsor_above_options']);
 				$fs_above = $ret['text'];

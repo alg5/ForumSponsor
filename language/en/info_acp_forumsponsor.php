@@ -1,11 +1,11 @@
 <?php
-/** 
+/**
 *
 * ForumSponsor [English]
 *
 * @package ForumSponsor
 * @copyright (c) 2014 alg
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'FORUM_SPONSOR'			=> 'With the support of',
 	'FORUM_SPONSOR_ADM'		=> 'Data sponsor forum on index',
-	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML code for sponsor forum banner ',
+	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML/BBCODE banner(data) from sponsor on index page ',
 	'FORUM_SPONSOR_ABOVE_ADM'		=> 'Data sponsor above the  forum ',
 	'FORUM_SPONSOR_ABOVE_EXPLAIN'	=> 'HTML/BBCODE banner(data) from sponsor above the forum',
 	'USE_HTML'						=> 'Parse  HTML',

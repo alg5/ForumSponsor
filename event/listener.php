@@ -155,7 +155,7 @@ class listener implements EventSubscriberInterface
 		$template_data = $event['template_data'];
 		$forum_data = $event['forum_data'];
 		$fs = isset($forum_data['forum_sponsor']) ? $forum_data['forum_sponsor'] : '';
-		if 	($fs && $forum_data['forum_sponsor_parse_type'] == PARSE_AS_BBCODE)
+		if ($fs && $forum_data['forum_sponsor_parse_type'] == PARSE_AS_BBCODE)
 		{
 			$ret = generate_text_for_edit($fs, $forum_data['forum_sponsor_uid'], $forum_data['forum_sponsor_options']);
 			$fs = $ret['text'];

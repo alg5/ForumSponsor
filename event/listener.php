@@ -20,13 +20,27 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	public function __construct(\phpbb\template\template $template, \phpbb\user $user, \phpbb\request\request_interface $request, $phpbb_root_path, $php_ext)
+	/** @var \phpbb\template\template */
+	protected $template;
+
+	/** @var \phpbb\user */
+	protected $user;
+
+	/** @var \phpbb\request\request */
+	protected $request;
+	/**
+	* @param \phpbb\template\template	$template	Template object
+	* Constructor
+	* @param \phpbb\user				$user		User object
+	* @param \phpbb\request\request		$request	Request object
+	* @access public
+	*/
+
+	public function __construct(\phpbb\template\template $template, \phpbb\user $user, \phpbb\request\request_interface $request)
 	{
 		$this->template = $template;
 		$this->user = $user;
 		$this->request = $request;
-		$this->phpbb_root_path = $phpbb_root_path;
-		$this->php_ext = $php_ext;
 
 		if (!defined('PARSE_AS_HTML'))
 		{
@@ -58,7 +72,7 @@ class listener implements EventSubscriberInterface
 		$fs = $forum_sponsor;
 		if ($fs)
 		{
-			$fs_parse_type = $row['forum_sponsor_parse_type'];
+			$fs_parse_type = (int) $row['forum_sponsor_parse_type'];
 			if ($fs_parse_type == PARSE_AS_BBCODE)
 			{
 				//parse BBCode
@@ -82,7 +96,7 @@ class listener implements EventSubscriberInterface
 		$fs_above = $forum_sponsor_above;
 		if ($fs_above)
 		{
-			$fs_above_parse_type = $event['topic_data']['forum_sponsor_above_parse_type'];
+			$fs_above_parse_type = (int) $event['topic_data']['forum_sponsor_above_parse_type'];
 			if ($fs_above_parse_type == PARSE_AS_BBCODE)
 			{
 				$fs_above = generate_text_for_display(
@@ -103,7 +117,7 @@ class listener implements EventSubscriberInterface
 		$fs_above = $forum_sponsor_above;
 		if ($fs_above)
 		{
-			$fs_above_parse_type = $event['forum_data']['forum_sponsor_above_parse_type'];
+			$fs_above_parse_type = (int) $event['forum_data']['forum_sponsor_above_parse_type'];
 			if ($fs_above_parse_type == PARSE_AS_BBCODE)
 			{
 				$fs_above = generate_text_for_display(

@@ -15,7 +15,7 @@ class v_1_0_1 extends \phpbb\db\migration\migration
 	{
 		return array('\alg\ForumSponsor\migrations\v_1_0_0');
 	}
-   
+
 	public function update_schema()
 	{
 		return array(
@@ -25,6 +25,6 @@ class v_1_0_1 extends \phpbb\db\migration\migration
 				),
 			),
 		);
-	}	
+	}
 
 }

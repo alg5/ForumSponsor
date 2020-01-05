@@ -2,8 +2,8 @@ services:
     alg.ForumSponsor.listener:
         class: alg\ForumSponsor\event\listener
         arguments:
-            - @template
-            - @user
-            - @request
+            - '@template'
+            - '@user'
+            - '@request'
         tags:
             - { name: event.listener }

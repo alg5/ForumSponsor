@@ -1,4 +1,4 @@
-<!-- IF FORUM_SPONSOR_ABOVE -->
-	<div class="sponsor-above">{FORUM_SPONSOR_ABOVE}</div>
-	<br clear="all" />
-<!-- ENDIF -->
+{% if FORUM_SPONSOR_ABOVE %}
+    <div class="sponsor-above">{{ FORUM_SPONSOR_ABOVE }}</div>
+    <br clear="all" />
+{% endif %}

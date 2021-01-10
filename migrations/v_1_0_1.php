@@ -1,19 +1,19 @@
 <?php
 /**
 *
-* @package ForumSponsor
+* @package forumsponsor
 * @copyright (c) alg
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
-namespace alg\ForumSponsor\migrations;
+namespace alg\forumsponsor\migrations;
 
 class v_1_0_1 extends \phpbb\db\migration\migration
 {
 	static public function depends_on()
 	{
-		return array('\alg\ForumSponsor\migrations\v_1_0_0');
+		return array('\alg\forumsponsor\migrations\v_1_0_0');
 	}
 
 	public function update_schema()

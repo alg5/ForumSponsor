@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/alg5/adminnotifications.svg?branch=master)](https://travis-ci.org/alg5/adminnotifications)
+[![Build Status](https://travis-ci.org/alg5/adminnotifications.svg?branch=master)](https://travis-ci.org/alg5/ForumSponsor)
 
 ForumSponsor allows to place a sponsor's banner (or an advertisement) in the topic list on the index page, and also	allows to place it above the forum.	
-The instruction exists on setting page 
+In the admin panel under the "Forums" tab (pages "Create Forum" and "Edit forum"), you can set or update the option for using banners for this forum 
 Repository: https://github.com/alg5/ForumSponsor
 Installation:
 Copy all the repo content to the folder ext/alg/ForumSponsor
@@ -13,14 +13,14 @@ Supported languages:
 - Russian
 
 
-ForumSponsor РїРѕР·РІРѕР»СЏРµС‚ СЂР°Р·РјРµСЃС‚РёС‚СЊ Р±Р°РЅРЅРµСЂ СЃРїРѕРЅСЃРѕСЂР° ( РёР»Рё СЂРµРєР»Р°РјСѓ) РІ СЃРїРёСЃРєРµ С‚РµРј РЅР° РёРЅРґРµРєСЃРЅРѕР№ СЃС‚СЂР°РЅРёС†Рµ, Р° С‚Р°РєР¶Рµ СЃРІРµСЂС…Сѓ С„РѕСЂСѓРјР°
-Р РµРїРѕР·РёС‚РѕСЂРёР№: https://github.com/alg5/ForumSponsor
-РРЅСЃС‚Р°Р»Р»СЏС†РёСЏ:
-РЎРєРѕРїРёСЂСѓР№С‚Рµ РІСЃС‘ СЃРѕРґРµСЂР¶РёРјРѕРµ СЂРµРїРѕР·РёС‚РѕСЂРёСЏ РІ РїР°РїРєСѓ ext/alg/ForumSponsor/
+ForumSponsor позволяет разместить баннер спонсора ( или рекламу) в списке тем на индексной странице, а также сверху  форума
+Репозиторий: https://github.com/alg5/ForumSponsor
+Инсталляция:
+Скопируйте всё содержимое репозитория в папку ext/alg/ForumSponsor/
 
-РџРµСЂРµР№РґРёС‚Рµ РІ РџР°РЅРµР»СЊ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°: РђРЎР -> РџРµСЂСЃРѕРЅР°Р»РёР·Р°С†РёСЏ-> РЈРїСЂР°РІР»РµРЅРёРµ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё 
-Р’РєР»СЋС‡РёС‚Рµ СЂР°СЃС€РёСЂРµРЅРёРµ "adminnotifications"
-РџРѕРґРґРµСЂР¶РёРІР°РµРјС‹Рµ СЏР·С‹РєРё:
-- РђРЅРіР»РёР№СЃРєРёР№
-- Р СѓСЃСЃРєРёР№
+Перейдите в Панель администратора: АСР-> Персонализация-> Управление расширениями 
+Включите расширение "adminnotifications"
+Поддерживаемые языки:
+- Английский
+- Русский
 

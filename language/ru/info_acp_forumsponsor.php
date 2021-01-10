@@ -1,9 +1,9 @@
 <?php
 /**
 *
-* ForumSponsor [Russian]
+* forumsponsor [Russian]
 *
-* @package ForumSponsor
+* @package forumsponsor
 * @copyright (c) 2014 alg
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -35,11 +35,11 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'FORUM_SPONSOR'			=> 'При поддержке',
-	'FORUM_SPONSOR_ADM'		=> 'Данные спонсора форума на главной странице',
-	'FORUM_SPONSOR_EXPLAIN'	=> 'HTML/BBCODE баннера от спонсора на главной странице',
+	'FORUM_SPONSOR'					=> 'При поддержке',
+	'FORUM_SPONSOR_ADM'				=> 'Данные спонсора форума на главной странице',
+	'FORUM_SPONSOR_EXPLAIN'			=> 'HTML/BBCODE баннера от спонсора на главной странице',
 	'FORUM_SPONSOR_ABOVE_ADM'		=> 'Баннер и данные спонсора над форумом',
 	'FORUM_SPONSOR_ABOVE_EXPLAIN'	=> 'HTML/BBCODE баннера от спонсора  над форумом',
 	'USE_HTML'						=> 'Использовать  HTML',
-	'USE_BBCODE'						=> 'Использовать  BBCode',
+	'USE_BBCODE'					=> 'Использовать  BBCode',
 ));

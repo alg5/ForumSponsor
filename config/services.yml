@@ -1,6 +1,6 @@
 services:
-    alg.ForumSponsor.listener:
-        class: alg\ForumSponsor\event\listener
+    alg.forumsponsor.listener:
+        class: alg\forumsponsor\event\listener
         arguments:
             - '@template'
             - '@user'

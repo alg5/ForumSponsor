@@ -1,15 +1,18 @@
         <hr />
 	<dl>
-		<dt><label for="forum_sponsor">{L_FORUM_SPONSOR_ADM}:</label><br /><span>{L_FORUM_SPONSOR_EXPLAIN}</span></dt>
-		<dd><textarea id="forum_sponsor" name="forum_sponsor" rows="4" cols="45">{FORUM_SPONSOR}</textarea>
-            <label><input type="radio" class="radio"  name="forum_sponsor_parse_type"  value="0"<!-- IF S_FORUM_SPONSOR_HTML_CHECKED -->checked="checked"<!-- ENDIF -->  /> {L_USE_HTML}</label>
-            <label><input type="radio" class="radio " name="forum_sponsor_parse_type"   value="1"<!-- IF !S_FORUM_SPONSOR_HTML_CHECKED -->checked="checked"<!-- ENDIF --> /> {L_USE_BBCODE}</label>
+                    <dt><label for="forum_sponsor">{{ lang("FORUM_SPONSOR_ADM") }}{{ lang("COLON") }}</label><br /><span>{L_FORUM_SPONSOR_EXPLAIN}{{ lang("FORUM_SPONSOR_EXPLAIN") }}</span></dt>
+                    <dd>
+                        <textarea id="forum_sponsor" name="forum_sponsor" rows="4" cols="45">{{ FORUM_SPONSOR }}</textarea>
+                        <label><input type="radio" class="radio"  name="forum_sponsor_parse_type"  value="0" {% if  S_FORUM_SPONSOR_HTML_CHECKED %}checked="checked"{% endif %}  /> {{ lang("USE_HTML") }}</label>
+                        <label><input type="radio" class="radio " name="forum_sponsor_parse_type"   value="1" {% if !S_FORUM_SPONSOR_HTML_CHECKED %}checked="checked"{% endif %} /> {{ lang("USE_BBCODE") }}</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="forum_sponsor_above">{{ lang("FORUM_SPONSOR_ABOVE_ADM") }}{{ lang("COLON") }}</label><br /><span>{{ lang("FORUM_SPONSOR_ABOVE_EXPLAIN") }}</span></dt>
+                    <dd>
+                        <textarea id="forum_sponsor_above" name="forum_sponsor_above" rows="4" cols="45">{{ FORUM_SPONSOR_ABOVE }}</textarea>
+                        <label><input type="radio" class="radio"  name="forum_sponsor_above_parse_type"  value="0" {% if S_FORUM_SPONSOR_ABOVE_HTML_CHECKED %}checked="checked"{% endif %}  /> {{ lang("USE_HTML") }}</label>
+                        <label><input type="radio" class="radio" name="forum_sponsor_above_parse_type"  value="1" {% if !S_FORUM_SPONSOR_ABOVE_HTML_CHECKED %}checked="checked"{% endif %} /> {{ lang("USE_BBCODE") }}</label>
+                    </dd>
 	</dl>
-    <dl>
-		<dt><label for="forum_sponsor_above">{L_FORUM_SPONSOR_ABOVE_ADM}:</label><br /><span>{L_FORUM_SPONSOR_ABOVE_EXPLAIN}</span></dt>
-		<dd><textarea id="forum_sponsor_above" name="forum_sponsor_above" rows="4" cols="45">{FORUM_SPONSOR_ABOVE}</textarea>
-		    <label><input type="radio" class="radio"  name="forum_sponsor_above_parse_type"  value="0" <!-- IF S_FORUM_SPONSOR_ABOVE_HTML_CHECKED -->checked="checked"<!-- ENDIF -->  /> {L_USE_HTML}</label>
-            <label><input type="radio" class="radio" name="forum_sponsor_above_parse_type"  value="1" <!-- IF !S_FORUM_SPONSOR_ABOVE_HTML_CHECKED -->checked="checked"<!-- ENDIF --> /> {L_USE_BBCODE}</label>
-        </dd>
-	</dl>
-    <hr />
+        <hr />

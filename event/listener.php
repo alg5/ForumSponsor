@@ -20,8 +20,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	const PARSE_AS_HTML =  0;
-	const PARSE_AS_BBCODE =  1;  
+	const PARSE_AS_HTML   =  0;
+	const PARSE_AS_BBCODE =  1;
 
 	/** @var \phpbb\template\template */
 	protected $template;

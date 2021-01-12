@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/alg5/adminnotifications.svg?branch=master)](https://travis-ci.org/alg5/ForumSponsor)
+[![Build Status](https://travis-ci.org/alg5/adminnotifications.svg?branch=master)](https://travis-ci.org/alg5/forumsponsor)
 
-ForumSponsor allows to place a sponsor's banner (or an advertisement) in the topic list on the index page, and also	allows to place it above the forum.	
+Forum Sponsor allows to place a sponsor's banner (or an advertisement) in the topic list on the index page, and also	allows to place it above the forum.	
 In the admin panel under the "Forums" tab (pages "Create Forum" and "Edit forum"), you can set or update the option for using banners for this forum 
-Repository: https://github.com/alg5/ForumSponsor
+Repository: https://github.com/alg5/forumsponsor
 Installation:
 Copy all the repo content to the folder ext/alg/ForumSponsor
 
@@ -13,14 +13,14 @@ Supported languages:
 - Russian
 
 
-ForumSponsor ÔÓÁ‚ÓÎˇÂÚ ‡ÁÏÂÒÚËÚ¸ ·‡ÌÌÂ ÒÔÓÌÒÓ‡ ( ËÎË ÂÍÎ‡ÏÛ) ‚ ÒÔËÒÍÂ ÚÂÏ Ì‡ ËÌ‰ÂÍÒÌÓÈ ÒÚ‡ÌËˆÂ, ‡ Ú‡ÍÊÂ Ò‚ÂıÛ  ÙÓÛÏ‡
-–ÂÔÓÁËÚÓËÈ: https://github.com/alg5/ForumSponsor
-»ÌÒÚ‡ÎÎˇˆËˇ:
-—ÍÓÔËÛÈÚÂ ‚Ò∏ ÒÓ‰ÂÊËÏÓÂ ÂÔÓÁËÚÓËˇ ‚ Ô‡ÔÍÛ ext/alg/ForumSponsor/
+ForumSponsor –ø–æ–∑–≤–æ–ª—è–µ—Ç —Ä–∞–∑–º–µ—Å—Ç–∏—Ç—å –±–∞–Ω–Ω–µ—Ä —Å–ø–æ–Ω—Å–æ—Ä–∞ ( –∏–ª–∏ —Ä–µ–∫–ª–∞–º—É) –≤ —Å–ø–∏—Å–∫–µ —Ç–µ–º –Ω–∞ –∏–Ω–¥–µ–∫—Å–Ω–æ–π —Å—Ç—Ä–∞–Ω–∏—Ü–µ, –∞ —Ç–∞–∫–∂–µ —Å–≤–µ—Ä—Ö—É  —Ñ–æ—Ä—É–º–∞
+–†–µ–ø–æ–∑–∏—Ç–æ—Ä–∏–π: https://github.com/alg5/forumsponsor
+–ò–Ω—Å—Ç–∞–ª–ª—è—Ü–∏—è:
+–°–∫–æ–ø–∏—Ä—É–π—Ç–µ –≤—Å—ë —Å–æ–¥–µ—Ä–∂–∏–º–æ–µ —Ä–µ–ø–æ–∑–∏—Ç–æ—Ä–∏—è –≤ –ø–∞–ø–∫—É ext/alg/forumsponsor/
 
-œÂÂÈ‰ËÚÂ ‚ œ‡ÌÂÎ¸ ‡‰ÏËÌËÒÚ‡ÚÓ‡: ¿—–-> œÂÒÓÌ‡ÎËÁ‡ˆËˇ-> ”Ô‡‚ÎÂÌËÂ ‡Ò¯ËÂÌËˇÏË 
-¬ÍÎ˛˜ËÚÂ ‡Ò¯ËÂÌËÂ "adminnotifications"
-œÓ‰‰ÂÊË‚‡ÂÏ˚Â ˇÁ˚ÍË:
-- ¿Ì„ÎËÈÒÍËÈ
-- –ÛÒÒÍËÈ
+–ü–µ—Ä–µ–π–¥–∏—Ç–µ –≤ –ü–∞–Ω–µ–ª—å –∞–¥–º–∏–Ω–∏—Å—Ç—Ä–∞—Ç–æ—Ä–∞: –ê–°–†-> –ü–µ—Ä—Å–æ–Ω–∞–ª–∏–∑–∞—Ü–∏—è-> –£–ø—Ä–∞–≤–ª–µ–Ω–∏–µ —Ä–∞—Å—à–∏—Ä–µ–Ω–∏—è–º–∏ 
+–í–∫–ª—é—á–∏—Ç–µ —Ä–∞—Å—à–∏—Ä–µ–Ω–∏–µ "adminnotifications"
+–ü–æ–¥–¥–µ—Ä–∂–∏–≤–∞–µ–º—ã–µ —è–∑—ã–∫–∏:
+- –ê–Ω–≥–ª–∏–π—Å–∫–∏–π
+- –†—É—Å—Å–∫–∏–π
 
